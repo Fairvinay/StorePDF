@@ -37,14 +37,26 @@ ENV DOCKER_ENABLE_SECURITY=false \
     PATH=$PATH:/opt/venv/bin
 
 # Create a non-root user and set permissions
-RUN addgroup --system appgroup && adduser --system --ingroup appgroup appuser
-RUN addgroup --system Admin && adduser --system --ingroup Admin  appuser
-RUN addgroup --system Admin && adduser --system --ingroup Admin 10021
+#RUN addgroup --system appgroup && adduser --system --ingroup appgroup appuser
+#RUN addgroup --system Admin && adduser --system --ingroup Admin  appuser
+#RUN addgroup --system Admin && adduser --system --ingroup Admin 10021
 # Create a user with UID and GID in allowed range
-RUN addgroup --gid 10001 appgroup && \
-    adduser --disabled-password --gecos "" --uid 10001 --gid 10001 appuser
-RUN addgroup --gid 10001 appgroup && \
-    adduser --disabled-password --gecos "" --uid 10001 --gid 10001 10021
+#RUN addgroup --gid 10001 appgroup && \
+#    adduser --disabled-password --gecos "" --uid 10001 --gid 10001 appuser
+#RUN addgroup --gid 10001 appgroup && \
+#    adduser --disabled-password --gecos "" --uid 10001 --gid 10001 10021
+
+RUN groupadd -r appgroup && useradd -r -g appgroup -m appuser
+RUN groupadd -r Admin && useradd -r -g Admin -m appuser
+RUN groupadd -r Admin && useradd -r -g Admin -m 10021
+RUN groupadd -g 10001 appgroup && \
+    useradd -u 10001 -g 10001 -m -s /usr/sbin/nologin appuser
+RUN groupadd -g 10001 appgroup && \
+    useradd -u 10001 -g 10001 -m -s /usr/sbin/nologin 10021
+
+
+# Create user "10002" with UID 10002 and add to "Admin" group
+RUN useradd -u 10002 -m -G Admin 10002
 
 # JDK for app
 RUN echo "@main https://dl-cdn.alpinelinux.org/alpine/edge/main" | tee -a /etc/apk/repositories && \
