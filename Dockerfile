@@ -111,6 +111,14 @@ RUN echo "@main https://dl-cdn.alpinelinux.org/alpine/edge/main" | tee -a /etc/a
 
 RUN addgroup --gid 10001 stirlingpdfgroup && \
     adduser --disabled-password --gecos "" --uid 10001 --gid 10001 10021
+# Change ownership of the app folder
+RUN chown -R appuser:appgroup /app
+RUN chown -R appuser:Admin /app
+RUN chown -R 10021:Admin /app
+
+#Switch to the non-root user
+USER 10021
+
 EXPOSE 8080/tcp
 
 # Set user and run command
