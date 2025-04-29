@@ -36,6 +36,15 @@ ENV DOCKER_ENABLE_SECURITY=false \
     URE_BOOTSTRAP=file:///usr/lib/libreoffice/program/fundamentalrc \
     PATH=$PATH:/opt/venv/bin
 
+# Create a non-root user and set permissions
+RUN addgroup --system appgroup && adduser --system --ingroup appgroup appuser
+RUN addgroup --system Admin && adduser --system --ingroup Admin  appuser
+RUN addgroup --system Admin && adduser --system --ingroup Admin 10021
+# Create a user with UID and GID in allowed range
+RUN addgroup --gid 10001 appgroup && \
+    adduser --disabled-password --gecos "" --uid 10001 --gid 10001 appuser
+RUN addgroup --gid 10001 appgroup && \
+    adduser --disabled-password --gecos "" --uid 10001 --gid 10001 10021
 
 # JDK for app
 RUN echo "@main https://dl-cdn.alpinelinux.org/alpine/edge/main" | tee -a /etc/apk/repositories && \
@@ -88,6 +97,8 @@ RUN echo "@main https://dl-cdn.alpinelinux.org/alpine/edge/main" | tee -a /etc/a
     chown -R stirlingpdfuser:stirlingpdfgroup $HOME /scripts /usr/share/fonts/opentype/noto /configs /customFiles /pipeline && \
     chown stirlingpdfuser:stirlingpdfgroup /app.jar
 
+RUN addgroup --gid 10001 stirlingpdfgroup && \
+    adduser --disabled-password --gecos "" --uid 10001 --gid 10001 10021
 EXPOSE 8080/tcp
 
 # Set user and run command

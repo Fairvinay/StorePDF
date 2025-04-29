@@ -81,8 +81,15 @@
   flex-direction: column;
   justify-content: space-between;
   vertical-align: middle;
+  /*font-size: 14px;*/
+  font-weight: 600;
+      color: #0056b3;/#4b7cee;*rgb(1, 41, 112);#5d59e8*/
+        font-family: Nunito, sans-serif;
 }
-
+.icon-text:hover{
+  font-weight: 800;
+   color: #cdccf4;  font-size: 16px;
+}
 
 .scalable-languages-container {
   display: grid;
@@ -290,70 +297,90 @@ span.icon-text::after {
 .dropdown-item:hover.sign,
 .dropdown-item.active.sign {
   color: var(--md-nav-on-section-color-sign);
-  background-color: var(--md-nav-section-color-sign);
+  background-color: /*var(--md-nav-section-color-sign)*/ none;
+  background: #004081;
+      box-shadow: 1px 4px;
 }
 
 .dropdown-item:focus.organize,
 .dropdown-item:hover.organize,
 .dropdown-item.active.organize {
   color: var(--md-nav-on-section-color-organize);
-  background-color: var(--md-nav-section-color-organize);
+  background-color: /*var(--md-nav-section-color-organize)*/ none;;
+  background: #004081;
+      box-shadow: 1px 4px;
 }
 
 .dropdown-item:focus.convert,
 .dropdown-item:hover.convert,
 .dropdown-item.active.convert {
   color: var(--md-nav-on-section-color-convert);
-  background-color: var(--md-nav-section-color-convert);
+  background-color: /*var(--md-nav-section-color-convert)*/ none;;
+  background: #004081;
+      box-shadow: 1px 4px;
 }
 
 .dropdown-item:focus.convertto,
 .dropdown-item:hover.convertto,
 .dropdown-item.active.convertto {
   color: var(--md-nav-on-section-color-convertto);
-  background-color: var(--md-nav-section-color-convertto);
+  background-color: /*var(--md-nav-section-color-convertto)*/ none;;
+  background: #004081;
+      box-shadow: 1px 4px;
 }
 
 .dropdown-item:focus.image,
 .dropdown-item:hover.image,
 .dropdown-item.active.image {
   color: var(--md-nav-on-section-color-image);
-  background-color: var(--md-nav-section-color-image);
+  background-color: /*var(--md-nav-section-color-image)*/ none;;
+  background: #004081;
+      box-shadow: 1px 4px;
 }
 
 .dropdown-item:focus.word,
 .dropdown-item:hover.word,
 .dropdown-item.active.word {
   color: var(--md-nav-on-section-color-word);
-  background-color: var(--md-nav-section-color-word);
+  background-color: /*var(--md-nav-section-color-word)*/ none;;
+  background: #004081;
+      box-shadow: 1px 4px;
 }
 
 .dropdown-item:focus.ppt,
 .dropdown-item:hover.ppt,
 .dropdown-item.active.ppt {
   color: var(--md-nav-on-section-color-ppt);
-  background-color: var(--md-nav-section-color-ppt);
+  background-color: /*var(--md-nav-section-color-ppt)*/ none;;
+  background: #004081;
+      box-shadow: 1px 4px;
 }
 
 .dropdown-item:focus.security,
 .dropdown-item:hover.security,
 .dropdown-item.active.security {
   color: var(--md-nav-on-section-color-security);
-  background-color: var(--md-nav-section-color-security);
+  background-color: /*var(--md-nav-section-color-security)*/ none;
+  background: #004081;
+      box-shadow: 1px 4px;
 }
 
 .dropdown-item:focus.other,
 .dropdown-item:hover.other,
 .dropdown-item.active.other {
   color: var(--md-nav-on-section-color-other);
-  background-color: var(--md-nav-section-color-other);
+  background-color: /*var(--md-nav-section-color-other)*/ none;;
+  background: #004081;
+      box-shadow: 1px 4px;
 }
 
 .dropdown-item:focus.advance,
 .dropdown-item:hover.advance,
 .dropdown-item.active.advance {
   color: var(--md-nav-on-section-color-advance);
-  background-color: var(--md-nav-section-color-advance);
+  background-color: /*var(--md-nav-section-color-advance)*/ none;;
+  background: #004081;
+      box-shadow: 1px 4px;
 }
 
 /* Dropdown min-width */
@@ -477,8 +504,19 @@ html[dir="rtl"] .dropdown-menu[data-bs-popper] {
   gap: 30px;
   justify-content: center;
 }
-
+/*nav-group-container*/
+.tool-item  {
+    background: #fff;
+    border: 1px solid transparent;
+    border-radius: 6px;
+     margin-top: 15px;
+      user-select: none;
+      cursor: pointer;
+}
 .feature-group {
+ background: #fff;
+    border: 1px solid transparent;
+    border-radius: 6px;
   display: flex;
   flex-direction: column;
   min-width: 14rem;

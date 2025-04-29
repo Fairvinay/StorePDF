@@ -25,7 +25,7 @@
   border-color: var(--md-nav-color-on-seperator)">
     <div class="container ">
       <a class="navbar-brand" th:href="${@contextPath}" style="display: flex;">
-        <img class="main-icon" th:src="@{'/favicon.svg'}" alt="icon">
+        <img class="main-icon" th:src="@{'/favicon.png'}" alt="icon">
         <span class="icon-text" th:text="${@navBarText}"></span>
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -81,7 +81,7 @@
             <a class="nav-link" href="#" title="#{home.compressPdfs.title}" th:href="@{'/compress-pdf'}"
               th:classappend="${currentPage}=='compress-pdf' ? 'active' : ''" th:title="#{home.compressPdfs.desc}">
               <span class="material-symbols-rounded">
-                zoom_in_map
+                fit_screen             
               </span>
               <span class="icon-text" th:data-text="#{home.compressPdfs.title}"
                 th:text="#{home.compressPdfs.title}"></span>
@@ -171,7 +171,7 @@
           </li>
 
           <li class="nav-item" th:if="${!@runningProOrHigher}">
-            <a href="https://stirlingpdf.com/pricing" class="nav-link go-pro-link" target="_blank"
+            <a href="https://storenotify.com/pricing" class="nav-link go-pro-link" target="_blank"
               rel="noopener noreferrer">
               <span class="go-pro-badge" th:text="#{enterpriseEdition.button}"></span>
             </a>

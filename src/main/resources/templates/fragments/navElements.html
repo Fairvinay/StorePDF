@@ -1,6 +1,8 @@
 <th:block th:fragment="navElements">
   <div id="groupOrganize" class="feature-group">
-    <div th:replace="~{fragments/featureGroupHeader :: featureGroupHeader(groupTitle=#{navbar.sections.organize})}">
+    <div class="is-structure-btn">
+    <div   th:replace="~{fragments/featureGroupHeader :: featureGroupHeader(groupTitle=#{navbar.sections.organize})}">
+    </div>
     </div>
     <div class="nav-group-container">
       <div
@@ -41,7 +43,9 @@
   </div>
 
   <div id="groupConvertTo" class="feature-group">
-    <div th:replace="~{fragments/featureGroupHeader :: featureGroupHeader(groupTitle=#{navbar.sections.convertTo})}">
+    <div class="is-structure-btn">
+    <div    th:replace="~{fragments/featureGroupHeader :: featureGroupHeader(groupTitle=#{navbar.sections.convertTo})}">
+    </div>
     </div>
     <div class="nav-group-container">
       <div
@@ -62,7 +66,9 @@
     </div>
   </div>
   <div id="groupConvertFrom" class="feature-group">
+    <div class="is-structure-btn">
     <div th:replace="~{fragments/featureGroupHeader :: featureGroupHeader(groupTitle=#{navbar.sections.convertFrom})}">
+    </div>
     </div>
     <div class="nav-group-container">
       <div
@@ -96,7 +102,9 @@
     </div>
   </div>
   <div id="convertGroup" class="feature-group">
+    <div class="is-structure-btn">
     <div th:replace="~{fragments/featureGroupHeader :: featureGroupHeader(groupTitle=#{navbar.sections.convertTo})}">
+    </div>
     </div>
     <div class="nav-group-container">
       <div
@@ -145,7 +153,10 @@
     </div>
   </div>
   <div id="groupSecurity" class="feature-group">
+    <div class="is-structure-btn">
     <div th:replace="~{fragments/featureGroupHeader :: featureGroupHeader(groupTitle=#{navbar.sections.security})}">
+      
+    </div>
     </div>
     <div class="nav-group-container">
       <div
@@ -189,7 +200,10 @@
   </div>
 
   <div id="groupView" class="feature-group">
+    <div class="is-structure-btn">
     <div th:replace="~{fragments/featureGroupHeader :: featureGroupHeader(groupTitle=#{navbar.sections.edit})}">
+      
+    </div>
     </div>
     <div class="nav-group-container">
       <div
@@ -234,7 +248,9 @@
     </div>
   </div>
   <div id="groupAdvanced" class="feature-group">
+    <div class="is-structure-btn">
     <div th:replace="~{fragments/featureGroupHeader :: featureGroupHeader(groupTitle=#{navbar.sections.advance})}">
+    </div>
     </div>
     <div class="nav-group-container">
       <div
@@ -244,7 +260,7 @@
         th:replace="~{fragments/navbarEntry :: navbarEntry('adjust-contrast', 'palette', 'home.adjust-contrast.title', 'home.adjust-contrast.desc', 'adjust-contrast.tags', 'advance')}">
       </div>
       <div
-        th:replace="~{fragments/navbarEntry :: navbarEntry('compress-pdf', 'zoom_in_map', 'home.compressPdfs.title', 'home.compressPdfs.desc', 'compressPdfs.tags', 'advance')}">
+        th:replace="~{fragments/navbarEntry :: navbarEntry('compress-pdf', 'fit_screen             ', 'home.compressPdfs.title', 'home.compressPdfs.desc', 'compressPdfs.tags', 'advance')}">
       </div>
       <div
         th:replace="~{fragments/navbarEntry :: navbarEntry('extract-image-scans', 'scanner', 'home.ScannerImageSplit.title', 'home.ScannerImageSplit.desc', 'ScannerImageSplit.tags', 'advance')}">

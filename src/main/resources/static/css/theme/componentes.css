@@ -117,62 +117,72 @@ td {
 .sign .nav-icon,
 .sign.tool-header-icon {
   color: var(--md-nav-on-section-color-sign);
-  background-color: var(--md-nav-section-color-sign);
+  background-color: /*var(--md-nav-section-color-sign)*/ none;
 }
 
 .organize .nav-icon,
 .organize.tool-header-icon {
   color: var(--md-nav-on-section-color-organize);
-  background-color: var(--md-nav-section-color-organize);
+  background-color: /*var(--md-nav-section-color-organize)*/ none;;
+background-color: #ba30ea;
 }
 
 .convert .nav-icon,
 .convert.tool-header-icon {
   color: var(--md-nav-on-section-color-convert);
-  background-color: var(--md-nav-section-color-convert);
+  background-color: /*var(--md-nav-section-color-convert)*/ none;;
+background-color: darkmagenta;
 }
 
 .convertto .nav-icon,
 .convertto.tool-header-icon {
   color: var(--md-nav-on-section-color-convertto);
-  background-color: var(--md-nav-section-color-convertto);
+  background-color: /*var(--md-nav-section-color-convertto)*/ none;;
+    background-color: cadetblue;
 }
 
 
 .security .nav-icon,
 .security.tool-header-icon {
   color: var(--md-nav-on-section-color-security);
-  background-color: var(--md-nav-section-color-security);
+  background-color: /*var(--md-nav-section-color-security)*/ none;);
+    background: darkcyan;
 }
 
 .other .nav-icon,
 .other.tool-header-icon {
   color: var(--md-nav-on-section-color-other);
-  background-color: var(--md-nav-section-color-other);
+  background-color: /*var(--md-nav-section-color-other)*/ none;;
+        background-color: dodgerblue;
+
 }
 
 .advance .nav-icon,
 .advance.tool-header-icon {
   color: var(--md-nav-on-section-color-advance);
-  background-color: var(--md-nav-section-color-advance);
+  background-color: /*var(--md-nav-section-color-advance)*/ none;;
+background-color: darkorange;
 }
 
 .image .nav-icon,
 .image.tool-header-icon {
   color: var(--md-nav-on-section-color-image);
-  background-color: var(--md-nav-section-color-image);
+  background-color: /*var(--md-nav-section-color-image)*/ none;;
+
 }
 
 .word .nav-icon,
 .word.tool-header-icon {
   color: var(--md-nav-on-section-color-word);
-  background-color: var(--md-nav-section-color-word);
+  background-color: /*var(--md-nav-section-color-word)*/ none;;
+
 }
 
 .ppt .nav-icon,
 .ppt.tool-header-icon {
   color: var(--md-nav-on-section-color-ppt);
-  background-color: var(--md-nav-section-color-ppt);
+  background-color: /*var(--md-nav-section-color-ppt)*/ none;;
+
 }
 
 /* Tool Page Header*/
@@ -211,52 +221,52 @@ td {
 
 .feature-card .sign .nav-icon {
   color: var(--md-nav-on-section-color-sign);
-  background-color: var(--md-nav-section-color-sign);
+  background-color: /*var(--md-nav-section-color-sign)*/ none;
 }
 
 .feature-card .organize .nav-icon {
   color: var(--md-nav-on-section-color-organize);
-  background-color: var(--md-nav-section-color-organize);
+  background-color: /*var(--md-nav-section-color-organize)*/ none;;
 }
 
 .feature-card .convert .nav-icon {
   color: var(--md-nav-on-section-color-convert);
-  background-color: var(--md-nav-section-color-convert);
+  background-color: /*var(--md-nav-section-color-convert)*/ none;;
 }
 
 .feature-card .convertto .nav-icon {
   color: var(--md-nav-on-section-color-convertto);
-  background-color: var(--md-nav-section-color-convertto);
+  background-color: /*var(--md-nav-section-color-convertto)*/ none;;
 }
 
 .feature-card .security .nav-icon {
   color: var(--md-nav-on-section-color-security);
-  background-color: var(--md-nav-section-color-security);
+  background-color: /*var(--md-nav-section-color-security)*/ none;);
 }
 
 .feature-card .other .nav-icon {
   color: var(--md-nav-on-section-color-other);
-  background-color: var(--md-nav-section-color-other);
+  background-color: /*var(--md-nav-section-color-other)*/ none;;
 }
 
 .feature-card .advance .nav-icon {
   color: var(--md-nav-on-section-color-advance);
-  background-color: var(--md-nav-section-color-advance);
+  background-color: /*var(--md-nav-section-color-advance)*/ none;;
 }
 
 .feature-card .image .nav-icon {
   color: var(--md-nav-on-section-color-image);
-  background-color: var(--md-nav-section-color-image);
+  background-color: /*var(--md-nav-section-color-image)*/ none;;
 }
 
 .feature-card .word .nav-icon {
   color: var(--md-nav-on-section-color-word);
-  background-color: var(--md-nav-section-color-word);
+  background-color: /*var(--md-nav-section-color-word)*/ none;;
 }
 
 .feature-card .ppt .nav-icon {
   color: var(--md-nav-on-section-color-ppt);
-  background-color: var(--md-nav-section-color-ppt);
+  background-color: /*var(--md-nav-section-color-ppt)*/ none;;
 }
 
 /* Buttons Components */
@@ -846,7 +856,10 @@ textarea.form-control {
   padding: 0.5rem 1rem !important;
   border: 1px transparent;
 }
-
+.nav-link.icon-text {
+ background: #004081;
+     box-shadow: 1px 4px;
+}
 .navbar-nav li {
   flex: 1;
 }
@@ -872,7 +885,14 @@ textarea.form-control {
   font-weight: 500;
   font-variation-settings: var(--md-sys-icon-fill-1);
 }
-
+ .is-structure-btn {
+   width: 100%;
+   display: inline-block;
+   border: 1px solid  var(--azure-blue);
+       border-radius: 6px;
+    background-color: var(--azure-blue);
+    color:var(--tool-white);
+}
 .menu-title {
   padding: 0 1rem;
 }
