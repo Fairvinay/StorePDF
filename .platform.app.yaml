@@ -3,26 +3,14 @@ type: java:17
 disk: 2048
 
 build:
-  flavor: none
-  commands:
-    # Install Gradle
-    - curl -s "https://get.sdkman.io" | bash
-    - source "$HOME/.sdkman/bin/sdkman-init.sh"
-    - sdk install gradle 8.7  # or the version you use
-    - gradle clean build --no-daemon -x test
+  hooks:
+    build: |
+      ./gradlew build --no-daemon
 
 web:
   commands:
-    start: java -jar build/libs/Stirling-PDF-0.45.6.jar  # replace with actual JAR name
+    start: java -jar build/libs/YOUR_APP_NAME.jar  # Replace with your JAR filename
 
 mounts:
-  "/data": "persistent"
-
-# Optional: relationships for DB, cache, etc.
-# relationships:
-#   database: "db:mysql"
-
-# Optional: make environment variables available
-# variables:
-#   env:
-#     MY_ENV_VAR: "value"
+  "/data":
+    source: local
