@@ -2,14 +2,9 @@ name: app
 type: java:17
 disk: 2048
 
-build:
-  hooks:
-    build: |
-      ./gradlew build --no-daemon
-
 web:
   commands:
-    start: java -jar build/libs/YOUR_APP_NAME.jar  # Replace with your JAR filename
+    start: java -jar build/libs/YOUR_APP_NAME.jar  # Pre-built JAR must exist in repo
 
 mounts:
   "/data":
