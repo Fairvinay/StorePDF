@@ -1,15 +1,18 @@
 name: app
-type: "container:3.1"
+type: java:17
 disk: 2048
-
-build:
-  flavor: none
 
 web:
   commands:
     start: java -Dserver.port=8080 -jar build/libs/Stirling-PDF-0.45.6.jar
     # Pre-built JAR must exist in repo
-
+  locations:
+    "/":
+        passthru: true
+    "/static":
+        root: "static"
+        expires: 1
+        allow: true
 mounts:
   "/data":
     source: local
