@@ -4,7 +4,8 @@ disk: 2048
 
 web:
   commands:
-    start: java -jar build/libs/YOUR_APP_NAME.jar  # Pre-built JAR must exist in repo
+    start: java -Dserver.port=8080 -jar build/libs/Stirling-PDF-0.45.6.jar
+    # Pre-built JAR must exist in repo
 
 mounts:
   "/data":
