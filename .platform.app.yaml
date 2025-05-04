@@ -1,6 +1,9 @@
 name: app
-type: java:17
+type: "container"
 disk: 2048
+
+build:
+  flavor: none
 
 web:
   commands:
